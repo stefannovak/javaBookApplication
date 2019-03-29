@@ -40,6 +40,7 @@ public class BookPanel extends JPanel {
         okButton = new JButton("Add");
         resetButton = new JButton("Reset");
 
+        //The genre box - using a model. Should find a way to auto increment the IDs.
         DefaultComboBoxModel genreModel = new DefaultComboBoxModel();
         genreModel.addElement(new Genre(0, ""));
         genreModel.addElement(new Genre(1, "Classic"));
@@ -61,7 +62,6 @@ public class BookPanel extends JPanel {
 
         //Special Fields
         specialField.setEnabled(false);
-        ////////TO BE MOVED
         specialCheck.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -101,10 +101,12 @@ public class BookPanel extends JPanel {
             }
         });
 
+        //Borders
         Border innerBorder = BorderFactory.createTitledBorder("Add New Book");
         Border outerBorder = BorderFactory.createEmptyBorder(5,5,5,5);
         setBorder(BorderFactory.createCompoundBorder(outerBorder, innerBorder));
 
+        //left size dimensions.
         Dimension dim = getPreferredSize();
         dim.width = 250;
         setPreferredSize(dim);

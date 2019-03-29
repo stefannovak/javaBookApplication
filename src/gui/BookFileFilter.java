@@ -18,7 +18,7 @@ public class BookFileFilter extends FileFilter {
             return false;
         }
 
-        if(extension.equals("ber")) {
+        if(extension.equals("ber")) { //try with .ber 29/03/19
             return true;
         }
 

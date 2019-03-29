@@ -21,6 +21,7 @@ public class MainFrame extends JFrame {
     private JFileChooser fileChooser;
 
     public MainFrame() {
+        //General settings
         super("Book Application");
         setMinimumSize(new Dimension(500,400));
         setSize(600,500);
@@ -28,6 +29,7 @@ public class MainFrame extends JFrame {
         setVisible(true);
         setLayout(new BorderLayout());
 
+        //specific for open/save
         controller = new Controller();
         fileChooser = new JFileChooser();
         fileChooser.addChoosableFileFilter(new BookFileFilter());
@@ -40,8 +42,6 @@ public class MainFrame extends JFrame {
         //RIGHT
         tablePanel = new TablePanel();
         add(tablePanel, BorderLayout.CENTER);
-        //BorderFactory.createEtchedBorder();
-
         tablePanel.setData(controller.getBook());
 
         //TOP
@@ -143,7 +143,7 @@ public class MainFrame extends JFrame {
     }
 
     public void newTable() {
-
+        //To be figured out
     }
 
     public void save() {
