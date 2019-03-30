@@ -66,6 +66,10 @@ public class BookPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 specialField.setEnabled(true);
+                // If special is unchecked, clear the box.
+                if (!specialCheck.isSelected()) {
+                    specialField.setText(null);
+                }
             }
         });
 
@@ -91,13 +95,13 @@ public class BookPanel extends JPanel {
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                bookTitleField.setText("");
-                authorField.setText("");
+                bookTitleField.setText(null);
+                authorField.setText(null);
                 genreModel.setSelectedItem(genreModel.getElementAt(0));
-                locationField.setText("");
+                locationField.setText(null);
                 specialCheck.setSelected(false);
                 specialField.setEnabled(false);
-                specialField.setText("");
+                specialField.setText(null);
             }
         });
 

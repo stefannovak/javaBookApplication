@@ -12,10 +12,6 @@ public class FormEvent extends EventObject {
     private String specialNote;
 
 
-    public FormEvent(Object source) {
-        super(source);
-    }
-
     public FormEvent(Object source, String title, String author, Genre genre,
                      String location, String specialNote)
     {
@@ -27,6 +23,11 @@ public class FormEvent extends EventObject {
         this.location = location;
         this.specialNote = specialNote;
     }
+
+    public FormEvent(Object source) {
+        super(source);
+    }
+
 
     public String getTitle() {
         return title;

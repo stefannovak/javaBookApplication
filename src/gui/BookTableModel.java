@@ -7,8 +7,7 @@ import model.Book;
 public class BookTableModel extends AbstractTableModel {
     private List<Book> db;
 
-    public BookTableModel() {
-    }
+    public BookTableModel() {}
 
     public void setData(List<Book> db) {
         this.db = db;
@@ -49,7 +48,6 @@ public class BookTableModel extends AbstractTableModel {
             case 5:
                 return book.getSpecialNote();
         }
-
         return null;
     }
 

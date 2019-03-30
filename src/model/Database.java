@@ -3,18 +3,24 @@ package model;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Database {
 
-    private ArrayList<Book> books;
+    private List<Book> books;
 
     public Database() {
-        books = new ArrayList<Book>();
+        books = new LinkedList<Book>();
     }
 
     public void addBook (Book book) {
         books.add(book);
+    }
+
+    public void removeBook(int index) {
+        books.remove(index);
+        //ID FIX: maybe something like for(row index number; for all rows > than this number; reduce all IDs by 1)
     }
 
     public List<Book> getBooks() {
@@ -51,4 +57,6 @@ public class Database {
 
         ois.close();
     }
+
+
 }

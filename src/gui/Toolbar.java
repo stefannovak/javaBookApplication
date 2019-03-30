@@ -1,15 +1,9 @@
 package gui;
 
-import com.sun.tools.javac.Main;
-import controller.Controller;
-import javafx.scene.control.Tab;
 import javafx.stage.FileChooser;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.IOException;
 
 public class Toolbar extends JPanel {
     JButton _newButton;
@@ -17,8 +11,6 @@ public class Toolbar extends JPanel {
     JButton saveButton;
     JToolBar toolBar;
     FileChooser fileChooser;
-    MainFrame mainFrame;
-
 
     public Toolbar() {
         toolBar = new JToolBar("Debug");
@@ -56,15 +48,5 @@ public class Toolbar extends JPanel {
         add(_newButton);
         add(openButton);
         add(saveButton);
-
-//        //toolbar listeners
-//        openButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                mainFrame.open();
-//            }
-//        });
     }
-
-
 }

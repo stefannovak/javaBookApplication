@@ -2,8 +2,11 @@ package model;
 
 import java.io.Serializable;
 
-public class Book implements Serializable {
+// Count needs a major fix. Find a way to auto adjust all book IDs when table is changed.
+// Includes deletion, saving, opening and new file. 30/03/19
+// its something to do with table model
 
+public class Book implements Serializable {
     private static int count = 0;
     private int id;
     private String title;
@@ -19,16 +22,6 @@ public class Book implements Serializable {
         this.genre = genre;
         this.location = location;
         this.specialNote = specialNote;
-
-        this.id = count;
-        count++;
-    }
-
-    public Book(String title, String author, Genre genre, String location) {
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
-        this.location = location;
 
         this.id = count;
         count++;

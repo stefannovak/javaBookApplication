@@ -25,6 +25,12 @@ public class Controller {
 
         Book book = new Book(title, author, genre, location, special);
         db.addBook(book);
+
+        //ID FIX: Maybe a for loop to see if the ID above it isnt in order with the ID about to be instantiated??
+    }
+
+    public void removeBook(int index) {
+        db.removeBook(index);
     }
 
     public void saveToFile(File file) throws IOException {
