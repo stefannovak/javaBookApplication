@@ -1,4 +1,4 @@
-# javaBookApplication
+# Java Library Application
 My first original Java project
 
 This is my demo project that I will be working on, that hopefully adds to my CV to help secure my first job in software.
